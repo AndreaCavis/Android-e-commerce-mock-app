@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Register2">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/custom_toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="Delivery Address / Payment method"
+                    android:textStyle="bold"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextAppearance="@style/bigText"
+                    android:textColorHint="@color/pink100"
+                    android:layout_marginBottom="15dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tietFullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:hint="Full name" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilAddressLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextAppearance="@style/bigText"
+                    android:textColorHint="@color/pink100"
+                    android:layout_marginBottom="15dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tietAddressLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:hint="Address Line" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilFlatNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextAppearance="@style/bigText"
+                    android:textColorHint="@color/pink100"
+                    android:layout_marginBottom="15dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tietFlatNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Flat Number (optional)"
+                        android:textColor="@color/white"
+                        android:text="none"
+                        android:textSize="20sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPostcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextAppearance="@style/bigText"
+                    android:textColorHint="@color/pink100"
+                    android:layout_marginBottom="15dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tietPostcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:hint="Postcode" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextAppearance="@style/bigText"
+                    android:textColorHint="@color/pink100"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tietCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:hint="City" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tvAddPayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:layout_marginTop="50sp"
+                    android:layout_marginBottom="30dp"
+                    android:textColor="@color/pink"
+                    android:text="@string/add_payment"/>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/pink100"
+                    app:cardCornerRadius="10dp"
+                    android:padding="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:visibility="gone">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="10dp">
+
+                        <com.braintreepayments.cardform.view.CardForm
+                            android:id="@+id/card_form"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_marginBottom="45dp"/>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="bottom">
+
+                            <TextView
+                                android:id="@+id/tvAddCard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="A D D"
+                                android:textStyle="bold"
+                                android:layout_gravity="bottom"
+                                android:padding="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:textColor="@color/pink"/>
+
+                            <TextView
+                                android:id="@+id/tvCancel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="C A N C E L"
+                                android:textStyle="bold"
+                                android:layout_gravity="bottom"
+                                android:padding="10dp"
+                                android:layout_marginLeft="20dp"
+                                android:textColor="@color/pink"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/btnRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Register"
+                    android:layout_marginBottom="100dp"
+                    android:textSize="24sp" />
+
+
+            </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

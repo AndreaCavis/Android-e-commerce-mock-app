@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "815053842392",
+    "firebase_url": "https://asteroid-assessment2-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "asteroid-assessment2",
+    "storage_bucket": "asteroid-assessment2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815053842392:android:f05d14eceac9d2701cf4ad",
+        "android_client_info": {
+          "package_name": "com.example.asteroid"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCU3CsiN96fBrC5VTQx_X58dGWcZ0JPuow"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
